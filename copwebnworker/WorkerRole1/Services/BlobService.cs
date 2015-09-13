@@ -1,36 +1,31 @@
-﻿using Microsoft.WindowsAzure;
-using Microsoft.WindowsAzure.Storage;
-using Microsoft.WindowsAzure.Storage.Auth;
-using Microsoft.WindowsAzure.Storage.Blob;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Microsoft.WindowsAzure;
+using Microsoft.WindowsAzure.Storage;
+using Microsoft.WindowsAzure.Storage.Blob;
 
-namespace CloudSample.API.Media
+namespace WorkerRole1.Services
 {
     public class BlobService
     {
-        private string connectionString;
-        private string containerName = "images";
-        private string defaultImage = "image.jpg";
+        private readonly string _connectionString;
+        private readonly string _containerName = "images";
+        private readonly string _defaultImage = "image.jpg";
 
         public BlobService() 
         {
-            this.connectionString = CloudConfigurationManager.GetSetting("StorageAccount.ConnectionString");
+            _connectionString = CloudConfigurationManager.GetSetting("StorageAccount.ConnectionString");
         }
 
         public MemoryStream GetImage(string handle) 
         {
-            CloudStorageAccount storageAcct = CloudStorageAccount.Parse(this.connectionString);
+            CloudStorageAccount storageAcct = CloudStorageAccount.Parse(_connectionString);
             CloudBlobClient blobClient = storageAcct.CreateCloudBlobClient();
-            CloudBlobContainer container = blobClient.GetContainerReference(containerName);
+            CloudBlobContainer container = blobClient.GetContainerReference(_containerName);
 
             string imageName = String.Concat(handle, ".jpg");
             CloudBlockBlob blob = container.GetBlockBlobReference(imageName);
-            if (!blob.Exists()) blob = container.GetBlockBlobReference(defaultImage);
+            if (!blob.Exists()) blob = container.GetBlockBlobReference(_defaultImage);
 
             MemoryStream mStream = new MemoryStream();
             blob.DownloadToStream(mStream);

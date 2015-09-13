@@ -1,33 +1,29 @@
-﻿using Microsoft.WindowsAzure;
+﻿using System;
+using Microsoft.WindowsAzure;
 using Microsoft.WindowsAzure.Storage;
 using Microsoft.WindowsAzure.Storage.Table;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace CloudSample.API.Media
+namespace WorkerRole1.Services
 {
     public class TableService
     {
-        string connectionString;
-        string tableName = "email";
+        readonly string _connectionString;
+        readonly string _tableName = "email";
 
         public TableService() 
         {
-            this.connectionString = CloudConfigurationManager.GetSetting("StorageAccount.ConnectionString");
+            _connectionString = CloudConfigurationManager.GetSetting("StorageAccount.ConnectionString");
         }
 
         public void DeleteEmail(string thandle, double beforeDays)
         {
-            CloudStorageAccount storageAccount = CloudStorageAccount.Parse(connectionString);
+            CloudStorageAccount storageAccount = CloudStorageAccount.Parse(_connectionString);
             CloudTableClient tableClient = storageAccount.CreateCloudTableClient();
-            CloudTable table = tableClient.GetTableReference(tableName);
+            CloudTable table = tableClient.GetTableReference(_tableName);
             
             var projectionQuery = new TableQuery<DynamicTableEntity>()
                 .Where(TableQuery.GenerateFilterCondition("PartitionKey", QueryComparisons.Equal, thandle))
-                .Select(new string[] { "RowKey", "Timestamp" });
+                .Select(new[] { "RowKey", "Timestamp" });
 
             var batchOperation = new TableBatchOperation();
 

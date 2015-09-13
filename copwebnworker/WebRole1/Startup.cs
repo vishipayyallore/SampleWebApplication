@@ -1,7 +1,8 @@
 ﻿using Microsoft.Owin;
 using Owin;
+using WebRole1;
 
-[assembly: OwinStartupAttribute(typeof(WebRole1.Startup))]
+[assembly: OwinStartup(typeof(Startup))]
 namespace WebRole1
 {
     public partial class Startup

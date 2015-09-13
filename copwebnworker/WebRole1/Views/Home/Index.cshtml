@@ -1,31 +1,28 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Pluralsight Authors";
+    ViewBag.Message = "Learn from experts and get the answers you need";
 }
-
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
 
 <div class="row">
     <div class="col-md-4">
-        <h2>Getting started</h2>
+        <h2>Authors</h2>
+        <p>In this page we can search for authors, switch between data stores in case one fails, use image service to retrieve author photos, etc.</p>
+        <p><a id="aAuthorPage" class="btn btn-default" href="#">Demo &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Courses</h2>
         <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
+            Say goodbye to classroom-based training that takes you out of the office. Empower yourself to train on your time, when it’s convenient, and on any device..
         </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+        <p><a id="aCourses" class="btn btn-default" href="#">Demo &raquo;</a></p>
     </div>
     <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+        <h2>Exponential Back Off</h2>
+        <p>How we should change the retry logic in cloud. The best pratice that will reduce to number of transactions and lower the cost.</p>
+        <p><a id="aBackOff" class="btn btn-default" href="#">Demo &raquo;</a></p>
     </div>
 </div>
+
+@section scripts{
+    <script src="~/Scripts/App/HomeIndex.js"></script>
+}

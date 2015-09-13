@@ -3,10 +3,9 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>Cloud Patterns</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -17,26 +16,48 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Cloud Patterns", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Authors", "Author", "CloudConcepts")</li>
+                    <li>@Html.ActionLink("Courses", "Course", "CloudConcepts")</li>
+                    <li>@Html.ActionLink("EBO", "BackOff", "CloudConcepts")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                 </ul>
-                @Html.Partial("_LoginPartial")
             </div>
         </div>
     </div>
+    <div class="defaultbackground">
+        <div class="newcontainer rightAlign">
+            <a href="http://www.appliedis.com/" class="grayLink">AIS</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="http://www.cloudpatterns.org/" class="grayLink">Cloud Patterns</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="http://azure.microsoft.com/en-us/" class="grayLink">Azure</a>
+        </div>
+    </div>
+    <div class="greenbackground"><div class="newcontainer"><h1>@ViewBag.Title</h1></div></div>
+    <div class="graybackground"><div class="newcontainer">@ViewBag.Message</div></div>
     <div class="container body-content">
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            @*<p>&copy; @DateTime.Now.Year - Applied Information Sciences</p>*@
         </footer>
     </div>
-
+    <script type="text/javascript">
+    var Url = {
+        Author: '@Url.Content("~/CloudConcepts/Author")',
+        Course: '@Url.Content("~/CloudConcepts/Course")',
+        BackOff: '@Url.Content("~/CloudConcepts/BackOff")',
+        AuthorSearch: '@Url.Content("~/CloudConcepts/AuthorSearch")',
+        CourseSearch: '@Url.Content("~/CloudConcepts/CourseSearch")',
+        Mail: '@Url.Content("~/CloudConcepts/Mail")',
+        SiteContent: '@Url.Content("~/CloudConcepts/SiteContent")',
+        Image: 'http://127.0.0.1:8080/image?handle='
+    };
+</script>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)

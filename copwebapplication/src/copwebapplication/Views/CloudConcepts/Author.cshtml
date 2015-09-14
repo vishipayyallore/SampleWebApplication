@@ -1,0 +1,63 @@
+﻿@{
+    ViewBag.Title = "Pluralsight Authors";
+    ViewBag.Message = "Learn from experts and get the answers you need";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+
+<table>
+    <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th></th>
+        <th></th>
+    </tr>
+    <tr>
+        <td><input id="firstName" type="text" /></td>
+        <td><input id="lastName" type="text" /></td>
+        <td><input id="search" type="button" value="Search" /></td>
+        <td id="waitCell" style="display:none;">&nbsp;&nbsp;&nbsp;<img src="~/Content/Images/wait.gif"></td>
+    </tr>
+</table>
+<br/>
+<table id="resultTable" class="result">
+    <tr>
+        <th>&nbsp;Firstname&nbsp;</th>
+        <th>&nbsp;Lastname&nbsp;</th>
+        <th>&nbsp;Twitter&nbsp;</th>
+        <th>&nbsp;Phone&nbsp;</th>
+        <th>&nbsp;Email&nbsp;</th>
+        <th></th>
+    </tr>
+</table>
+
+<div id="email-dialog" title="Email" style="display:none;">
+    @*<span class="ui-state-default"><span class="ui-icon ui-icon-info" style="float:left; margin:0 7px 0 0;"></span></span>*@
+    <div style="margin-left: 23px;">
+        <table>
+            <tr>
+                <td>
+                    <span>To:</span>
+                </td>
+                <td>
+                    <input type="text" id="to" class="wideBox" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>Message:&nbsp;</span>
+                </td>
+                <td>
+                    <textarea id="message" class="wideBox highBox"></textarea>
+                    <input type="hidden" id="thandle" />
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+@section scripts{
+    <script src="~/Scripts/jquery-ui.js"></script>
+    <script src="~/Scripts/App/CloudConceptsAuthor.js"></script>
+    }

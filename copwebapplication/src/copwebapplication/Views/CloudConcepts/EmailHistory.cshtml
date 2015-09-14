@@ -1,0 +1,37 @@
+﻿@{
+    ViewBag.Title = "Email History";
+    ViewBag.Message = "Learn from experts and get the answers you need";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+
+<table>
+    <tr>
+        <th>From </th>
+        <th>To</th>
+        <th></th>
+        <th></th>
+    </tr>
+    <tr>
+        <td><input id="fromDate" type="text" /></td>
+        <td><input id="toDate" type="text" /></td>
+        <td><input id="search" type="button" value="Search" /></td>
+        <td id="waitCell" style="display:none;">&nbsp;&nbsp;&nbsp;<img src="~/Content/Images/wait.gif"></td>
+    </tr>
+</table>
+<br/>
+<table id="resultTable" class="result">
+    <tr>
+        <th>&nbsp;Date&nbsp;</th>
+        <th>&nbsp;Status&nbsp;</th>
+        <th>&nbsp;To&nbsp;</th>
+        <th>&nbsp;Message&nbsp;</th>
+        <th></th>
+    </tr>
+</table>
+
+@section scripts{
+    <script src="~/Scripts/jquery-ui.js"></script>
+    <script src="~/Scripts/App/CloudConceptsEmailHistory.js"></script>
+    }

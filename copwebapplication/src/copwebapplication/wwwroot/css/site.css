@@ -61,7 +61,7 @@ table.result th {
 }
 
 .greenbackground {
-    background-image:url(Images/green-cube-v1.png);
+    background-image:url(/Images/green-cube-v1.png);
     background-attachment:scroll;
     background-repeat:repeat;
     background-position-x:center;

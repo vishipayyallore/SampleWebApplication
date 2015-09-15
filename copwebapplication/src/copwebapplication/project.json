@@ -1,39 +1,40 @@
 {
-    "webroot": "wwwroot",
-    "version": "1.0.0-*",
+  "webroot": "wwwroot",
+  "version": "1.0.0-*",
 
-    "dependencies": {
-        "Microsoft.AspNet.Diagnostics": "1.0.0-beta6",
-        "Microsoft.AspNet.Mvc": "6.0.0-beta6",
-        "Microsoft.AspNet.Mvc.TagHelpers": "6.0.0-beta6",
-        "Microsoft.AspNet.Server.IIS": "1.0.0-beta6",
-        "Microsoft.AspNet.Server.WebListener": "1.0.0-beta6",
-        "Microsoft.AspNet.StaticFiles": "1.0.0-beta6",
-        "Microsoft.AspNet.Tooling.Razor": "1.0.0-beta6",
-        "Microsoft.Framework.Configuration.Json": "1.0.0-beta6",
-        "Microsoft.Framework.Logging": "1.0.0-beta6",
-        "Microsoft.Framework.Logging.Console": "1.0.0-beta6",
-        "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0-beta6",
-        "EntityFramework.AzureTableStorage": "7.0.0-beta1",
-        "EntityFramework.SqlServer": "7.0.0-beta3",
-        "EntityFramework.Commands": "7.0.0-beta3",
-        "System.Runtime.Serialization.Primitives": "4.0.10-*",
-        "SendGrid.Net40": "5.1.0",
-        "System.Net.Http": "4.0.1-beta-23225",
-        "System.Web.Helpers.dll": "1.0.0",
-        "SimpleHelpers.ConfigManager": "1.0.5",
-        "Microsoft.AspNet.WebPages": "3.2.3",
-        "HttpClientExtensions": "1.0.3",
-        "System.Net.Http.Formatting.Extension": "5.2.3"
-    },
+  "dependencies": {
+    "Microsoft.AspNet.Diagnostics": "1.0.0-beta6",
+    "Microsoft.AspNet.Mvc": "6.0.0-beta6",
+    "Microsoft.AspNet.Mvc.TagHelpers": "6.0.0-beta6",
+    "Microsoft.AspNet.Server.IIS": "1.0.0-beta6",
+    "Microsoft.AspNet.Server.WebListener": "1.0.0-beta6",
+    "Microsoft.AspNet.StaticFiles": "1.0.0-beta6",
+    "Microsoft.AspNet.Tooling.Razor": "1.0.0-beta6",
+    "Microsoft.Framework.Configuration.Json": "1.0.0-beta6",
+    "Microsoft.Framework.Logging": "1.0.0-beta6",
+    "Microsoft.Framework.Logging.Console": "1.0.0-beta6",
+    "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0-beta6",
+    "EntityFramework.AzureTableStorage": "5.0.2",
+    "EntityFramework.SqlServer": "7.0.0-beta3",
+    "EntityFramework.Commands": "7.0.0-beta3",
+    "System.Runtime.Serialization.Primitives": "4.0.10-*",
+    "SendGrid.Net40": "5.1.0",
+    "System.Net.Http": "4.0.1-beta-23225",
+    "System.Web.Helpers.dll": "1.0.0",
+    "SimpleHelpers.ConfigManager": "1.0.5",
+    "Microsoft.AspNet.WebPages": "3.2.3",
+    "HttpClientExtensions": "1.0.3",
+    "System.Net.Http.Formatting.Extension": "5.2.3"
+  },
 
-    "commands": {
-        "web": "Microsoft.AspNet.Hosting --config hosting.ini"
-    },
+  "commands": {
+    "web": "Microsoft.AspNet.Hosting --config hosting.ini"
+  },
 
-    "frameworks": {
-        "dnx451": { }
-    },
+  "frameworks": {
+    "dnx451": { },
+    "dnxcore50": { }
+  },
 
     "exclude": [
         "wwwroot",

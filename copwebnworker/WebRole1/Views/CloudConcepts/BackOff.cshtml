@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "Exponential Back Off";
+    ViewBag.Message = "Redesign your retry logic to lower costs and avoid bottlenecks";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+
+<table>
+    <tr>
+        <th>Url</th>
+        <th></th>
+        <th></th>
+    </tr>
+    <tr>
+        <td><input id="url" type="text" class="urlBox" /></td>
+        <td><input id="loadsite" type="button" value="Load" /></td>
+        <td id="waitCell" style="display:none;">&nbsp;&nbsp;&nbsp;<img src="~/Content/Images/wait.gif"></td>
+    </tr>
+</table>
+<br />
+<div id="contentDiv">
+</div>
+
+
+@section scripts{
+    <script src="~/Scripts/App/CloudConceptsBackOff.js"></script>
+}

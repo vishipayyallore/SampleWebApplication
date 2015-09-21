@@ -13,18 +13,16 @@
     "Microsoft.Framework.Configuration.Json": "1.0.0-beta6",
     "Microsoft.Framework.Logging": "1.0.0-beta6",
     "Microsoft.Framework.Logging.Console": "1.0.0-beta6",
-    "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0-beta6",
-    "EntityFramework.AzureTableStorage": "5.0.2",
-    "EntityFramework.SqlServer": "7.0.0-beta3",
-    "EntityFramework.Commands": "7.0.0-beta3",
     "System.Runtime.Serialization.Primitives": "4.0.10-*",
-    "SendGrid.Net40": "5.1.0",
+    "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0-beta6",
+    "EntityFramework.AzureTableStorage": "7.0.0-beta1",
     "System.Net.Http": "4.0.1-beta-23225",
+    "Sendgrid": "6.1.0",
     "System.Web.Helpers.dll": "1.0.0",
-    "SimpleHelpers.ConfigManager": "1.0.5",
-    "Microsoft.AspNet.WebPages": "3.2.3",
+    "System.Configuration.Abstractions": "2.0.2.24",
     "HttpClientExtensions": "1.0.3",
-    "System.Net.Http.Formatting.Extension": "5.2.3"
+    "System.Net.Http.Formatting.Extension": "5.2.3.0",
+    "Microsoft.AspNet.WebPages": "3.2.3"
   },
 
   "commands": {
@@ -35,19 +33,19 @@
     "dnx451": { }
   },
 
-    "exclude": [
-        "wwwroot",
-        "node_modules",
-        "bower_components"
-    ],
-    "publishExclude": [
-        "node_modules",
-        "bower_components",
-        "**.xproj",
-        "**.user",
-        "**.vspscc"
-    ],
-    "scripts": {
-        "prepublish": [ "npm install", "bower install", "gulp clean", "gulp min" ]
-    }
+  "exclude": [
+    "wwwroot",
+    "node_modules",
+    "bower_components"
+  ],
+  "publishExclude": [
+    "node_modules",
+    "bower_components",
+    "**.xproj",
+    "**.user",
+    "**.vspscc"
+  ],
+  "scripts": {
+    "prepublish": [ "npm install", "bower install", "gulp clean", "gulp min" ]
+  }
 }

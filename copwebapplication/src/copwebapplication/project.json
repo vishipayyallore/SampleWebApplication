@@ -1,4 +1,4 @@
-{
+﻿{
   "webroot": "wwwroot",
   "version": "1.0.0-*",
 
@@ -15,12 +15,10 @@
     "Microsoft.Framework.Logging.Console": "1.0.0-beta6",
     "System.Runtime.Serialization.Primitives": "4.0.10-*",
     "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0-beta6",
-    "EntityFramework.AzureTableStorage": "7.0.0-beta1",
+    "AzureCloudTableContext": "2.2.0-beta",
+    "System.Configuration.Abstractions": "2.0.2.24",
     "System.Net.Http": "4.0.1-beta-23225",
     "Sendgrid": "6.1.0",
-    "System.Web.Helpers.dll": "1.0.0",
-    "System.Configuration.Abstractions": "2.0.2.24",
-    "HttpClientExtensions": "1.0.3",
     "System.Net.Http.Formatting.Extension": "5.2.3.0",
     "Microsoft.AspNet.WebPages": "3.2.3"
   },

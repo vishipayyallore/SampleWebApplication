@@ -3,93 +3,24 @@
   "version": 1,
   "targets": {
     "DNX,Version=v4.5.1": {
-      "EntityFramework/7.0.0-beta1": {
+      "AzureCloudTableContext/2.2.0-beta": {
         "dependencies": {
-          "Ix-Async": "1.2.3-beta",
-          "Microsoft.Framework.Logging": "1.0.0-beta1",
-          "Microsoft.Framework.OptionsModel": "1.0.0-beta1",
-          "Remotion.Linq": "1.15.15.0",
-          "System.Collections.Immutable": "1.1.32-beta"
+          "Microsoft.WindowsAzure.ConfigurationManager": "2.0.2.0",
+          "ServiceStack.Text": "3.9.70",
+          "WindowsAzure.Storage": "2.1.0.3"
         },
         "frameworkAssemblies": [
-          "Microsoft.CSharp",
-          "mscorlib",
           "System",
-          "System.Collections",
           "System.Core",
-          "System.Diagnostics.Debug",
-          "System.Diagnostics.Tools",
-          "System.Globalization",
-          "System.Linq",
-          "System.Linq.Expressions",
-          "System.Linq.Queryable",
-          "System.ObjectModel",
-          "System.Reflection",
-          "System.Reflection.Extensions",
-          "System.Resources.ResourceManager",
-          "System.Runtime",
-          "System.Runtime.Extensions",
-          "System.Runtime.InteropServices",
-          "System.Threading"
+          "System.Xml"
         ],
         "compile": {
-          "lib/aspnet50/EntityFramework.dll": {}
+          "lib/net45/AzureCloudTableContext.Api.dll": {}
         },
         "runtime": {
-          "lib/aspnet50/EntityFramework.dll": {}
+          "lib/net45/AzureCloudTableContext.Api.dll": {}
         }
       },
-      "EntityFramework.AzureTableStorage/7.0.0-beta1": {
-        "dependencies": {
-          "EntityFramework": "7.0.0-beta1",
-          "WindowsAzure.Storage": "4.1.0"
-        },
-        "frameworkAssemblies": [
-          "Microsoft.CSharp",
-          "mscorlib",
-          "System",
-          "System.Core"
-        ],
-        "compile": {
-          "lib/aspnet50/EntityFramework.AzureTableStorage.dll": {}
-        },
-        "runtime": {
-          "lib/aspnet50/EntityFramework.AzureTableStorage.dll": {}
-        }
-      },
-      "HttpClientExtensions/1.0.3": {
-        "dependencies": {
-          "Microsoft.Net.Http": "2.2.29",
-          "Newtonsoft.Json": "7.0.1"
-        },
-        "compile": {
-          "lib/HttpClientExtensions.dll": {},
-          "lib/Newtonsoft.Json.dll": {},
-          "lib/System.Net.Http.dll": {},
-          "lib/System.Net.Http.Extensions.dll": {},
-          "lib/System.Net.Http.Primitives.dll": {}
-        },
-        "runtime": {
-          "lib/HttpClientExtensions.dll": {},
-          "lib/Newtonsoft.Json.dll": {},
-          "lib/System.Net.Http.dll": {},
-          "lib/System.Net.Http.Extensions.dll": {},
-          "lib/System.Net.Http.Primitives.dll": {}
-        }
-      },
-      "Ix-Async/1.2.3-beta": {
-        "frameworkAssemblies": [
-          "System",
-          "System.Core"
-        ],
-        "compile": {
-          "lib/net45/System.Interactive.Async.dll": {}
-        },
-        "runtime": {
-          "lib/net45/System.Interactive.Async.dll": {}
-        }
-      },
-      "jQuery/2.1.1": {},
       "Microsoft.AspNet.Antiforgery/1.0.0-beta6": {
         "dependencies": {
           "Microsoft.AspNet.DataProtection": "1.0.0-beta6",
@@ -918,18 +849,6 @@
           "lib/dnx451/Microsoft.AspNet.WebUtilities.dll": {}
         }
       },
-      "Microsoft.Bcl/1.1.10": {
-        "dependencies": {
-          "Microsoft.Bcl.Build": "1.0.14"
-        },
-        "compile": {
-          "lib/net45/_._": {}
-        },
-        "runtime": {
-          "lib/net45/_._": {}
-        }
-      },
-      "Microsoft.Bcl.Build/1.0.14": {},
       "Microsoft.CodeAnalysis.Analyzers/1.0.0": {
         "frameworkAssemblies": [
           "System"
@@ -959,7 +878,7 @@
           "lib/net45/Microsoft.CodeAnalysis.CSharp.dll": {}
         }
       },
-      "Microsoft.Data.Edm/5.6.0": {
+      "Microsoft.Data.Edm/5.2.0": {
         "compile": {
           "lib/net40/Microsoft.Data.Edm.dll": {}
         },
@@ -996,10 +915,10 @@
           }
         }
       },
-      "Microsoft.Data.OData/5.6.0": {
+      "Microsoft.Data.OData/5.2.0": {
         "dependencies": {
-          "Microsoft.Data.Edm": "[5.6.0]",
-          "System.Spatial": "[5.6.0]"
+          "Microsoft.Data.Edm": "[5.2.0]",
+          "System.Spatial": "[5.2.0]"
         },
         "compile": {
           "lib/net40/Microsoft.Data.OData.dll": {}
@@ -1033,46 +952,6 @@
             "locale": "zh-Hans"
           },
           "lib/net40/zh-Hant/Microsoft.Data.OData.resources.dll": {
-            "locale": "zh-Hant"
-          }
-        }
-      },
-      "Microsoft.Data.Services.Client/5.6.0": {
-        "dependencies": {
-          "Microsoft.Data.OData": "[5.6.0]"
-        },
-        "compile": {
-          "lib/net40/Microsoft.Data.Services.Client.dll": {}
-        },
-        "runtime": {
-          "lib/net40/Microsoft.Data.Services.Client.dll": {}
-        },
-        "resource": {
-          "lib/net40/de/Microsoft.Data.Services.Client.resources.dll": {
-            "locale": "de"
-          },
-          "lib/net40/es/Microsoft.Data.Services.Client.resources.dll": {
-            "locale": "es"
-          },
-          "lib/net40/fr/Microsoft.Data.Services.Client.resources.dll": {
-            "locale": "fr"
-          },
-          "lib/net40/it/Microsoft.Data.Services.Client.resources.dll": {
-            "locale": "it"
-          },
-          "lib/net40/ja/Microsoft.Data.Services.Client.resources.dll": {
-            "locale": "ja"
-          },
-          "lib/net40/ko/Microsoft.Data.Services.Client.resources.dll": {
-            "locale": "ko"
-          },
-          "lib/net40/ru/Microsoft.Data.Services.Client.resources.dll": {
-            "locale": "ru"
-          },
-          "lib/net40/zh-Hans/Microsoft.Data.Services.Client.resources.dll": {
-            "locale": "zh-Hans"
-          },
-          "lib/net40/zh-Hant/Microsoft.Data.Services.Client.resources.dll": {
             "locale": "zh-Hant"
           }
         }
@@ -1491,24 +1370,6 @@
           "lib/dnx451/Microsoft.Framework.WebEncoders.Core.dll": {}
         }
       },
-      "Microsoft.Net.Http/2.2.29": {
-        "dependencies": {
-          "Microsoft.Bcl": "1.1.10",
-          "Microsoft.Bcl.Build": "1.0.14"
-        },
-        "frameworkAssemblies": [
-          "System.Net.Http",
-          "System.Net.Http.WebRequest"
-        ],
-        "compile": {
-          "lib/net45/System.Net.Http.Extensions.dll": {},
-          "lib/net45/System.Net.Http.Primitives.dll": {}
-        },
-        "runtime": {
-          "lib/net45/System.Net.Http.Extensions.dll": {},
-          "lib/net45/System.Net.Http.Primitives.dll": {}
-        }
-      },
       "Microsoft.Net.Http.Headers/1.0.0-beta6": {
         "frameworkAssemblies": [
           "Microsoft.CSharp",
@@ -1583,33 +1444,20 @@
           "lib/net40/Microsoft.Web.Infrastructure.dll": {}
         }
       },
-      "Microsoft.WindowsAzure.ConfigurationManager/1.8.0.0": {
+      "Microsoft.WindowsAzure.ConfigurationManager/2.0.2.0": {
         "compile": {
-          "lib/net35-full/Microsoft.WindowsAzure.Configuration.dll": {}
+          "lib/net40/Microsoft.WindowsAzure.Configuration.dll": {}
         },
         "runtime": {
-          "lib/net35-full/Microsoft.WindowsAzure.Configuration.dll": {}
+          "lib/net40/Microsoft.WindowsAzure.Configuration.dll": {}
         }
       },
-      "Newtonsoft.Json/7.0.1": {
+      "Newtonsoft.Json/6.0.6": {
         "compile": {
           "lib/net45/Newtonsoft.Json.dll": {}
         },
         "runtime": {
           "lib/net45/Newtonsoft.Json.dll": {}
-        }
-      },
-      "Remotion.Linq/1.15.15.0": {
-        "compile": {
-          "lib/portable-net45+wp80+wpa81+win/Remotion.Linq.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net45+wp80+wpa81+win/Remotion.Linq.dll": {}
-        }
-      },
-      "SampleDependency/1.0.0": {
-        "dependencies": {
-          "jQuery": "2.1.1"
         }
       },
       "Sendgrid/6.1.0": {
@@ -1629,6 +1477,14 @@
         },
         "runtime": {
           "lib/net40/SendGrid.SmtpApi.dll": {}
+        }
+      },
+      "ServiceStack.Text/3.9.70": {
+        "compile": {
+          "lib/net35/ServiceStack.Text.dll": {}
+        },
+        "runtime": {
+          "lib/net35/ServiceStack.Text.dll": {}
         }
       },
       "System.Collections.Immutable/1.1.36": {
@@ -1715,7 +1571,7 @@
           "lib/dotnet/System.Runtime.Serialization.Primitives.dll": {}
         }
       },
-      "System.Spatial/5.6.0": {
+      "System.Spatial/5.2.0": {
         "compile": {
           "lib/net40/System.Spatial.dll": {}
         },
@@ -1752,26 +1608,14 @@
           }
         }
       },
-      "System.Web.Helpers.dll/1.0.0": {
+      "WindowsAzure.Storage/2.1.0.3": {
         "dependencies": {
-          "SampleDependency": "1.0"
-        },
-        "compile": {
-          "lib/Net40/System.Web.Helpers.dll": {}
-        },
-        "runtime": {
-          "lib/Net40/System.Web.Helpers.dll": {}
-        }
-      },
-      "WindowsAzure.Storage/4.1.0": {
-        "dependencies": {
-          "Microsoft.Data.OData": "5.6.0",
-          "Microsoft.Data.Services.Client": "5.6.0",
-          "Microsoft.WindowsAzure.ConfigurationManager": "1.8.0.0",
-          "Newtonsoft.Json": "5.0.6"
+          "Microsoft.Data.OData": "5.2.0",
+          "Microsoft.WindowsAzure.ConfigurationManager": "1.8.0.0"
         },
         "frameworkAssemblies": [
           "System.Data",
+          "System.Data.Services.Client",
           "System.Xml",
           "System.Xml.Linq"
         ],
@@ -1785,87 +1629,13 @@
     }
   },
   "libraries": {
-    "EntityFramework/7.0.0-beta1": {
-      "sha512": "4Eh8hRudfqY1lgWjjTO4dVKryfN6N/I3BszzRmMY/b8DMwsayX2INyL7qKXBGmpuuG7iiEiuxQfLogEIr3Lh/Q==",
+    "AzureCloudTableContext/2.2.0-beta": {
+      "sha512": "YW5r5KPKSM2+1LYvm/nQdqjCA/MuYXltOOOXshSrUGGGiBMdiWsIFRVE5OFb3pjTmRtWpYAR+NtJ/XauqJ7ayg==",
       "files": [
-        "EntityFramework.7.0.0-beta1.nupkg",
-        "EntityFramework.7.0.0-beta1.nupkg.sha512",
-        "EntityFramework.nuspec",
-        "lib/aspnet50/EntityFramework.dll",
-        "lib/aspnet50/EntityFramework.xml",
-        "lib/aspnetcore50/EntityFramework.dll",
-        "lib/aspnetcore50/EntityFramework.xml",
-        "lib/net45/EntityFramework.dll",
-        "lib/net45/EntityFramework.xml",
-        "lib/portable-net451+win81+wpa81/EntityFramework.dll",
-        "lib/portable-net451+win81+wpa81/EntityFramework.xml"
-      ]
-    },
-    "EntityFramework.AzureTableStorage/7.0.0-beta1": {
-      "sha512": "/I4aCN0qg9whSDHgaTxsOimZcNx/TtXAFWMZHc4ms6LX1ZC66ocqmRaguXis+JU16s9ywBdsLzQ2YLCuG+D5vQ==",
-      "files": [
-        "EntityFramework.AzureTableStorage.7.0.0-beta1.nupkg",
-        "EntityFramework.AzureTableStorage.7.0.0-beta1.nupkg.sha512",
-        "EntityFramework.AzureTableStorage.nuspec",
-        "lib/aspnet50/EntityFramework.AzureTableStorage.dll",
-        "lib/aspnet50/EntityFramework.AzureTableStorage.xml",
-        "lib/net45/EntityFramework.AzureTableStorage.dll",
-        "lib/net45/EntityFramework.AzureTableStorage.xml"
-      ]
-    },
-    "HttpClientExtensions/1.0.3": {
-      "sha512": "VGoU3Y60Tfp8q9uCS43snnpGG/4T8jP9bxLGEHF/xD54j0l8XzZV7WLZIrEG8ih6TYFeWvSue9TETNyb7/C9ag==",
-      "files": [
-        "HttpClientExtensions.1.0.3.nupkg",
-        "HttpClientExtensions.1.0.3.nupkg.sha512",
-        "HttpClientExtensions.dll",
-        "HttpClientExtensions.dll.config",
-        "HttpClientExtensions.nuspec",
-        "HttpClientExtensions.pdb",
-        "lib/HttpClientExtensions.dll",
-        "lib/Newtonsoft.Json.dll",
-        "lib/System.Net.Http.dll",
-        "lib/System.Net.Http.Extensions.dll",
-        "lib/System.Net.Http.Primitives.dll",
-        "Newtonsoft.Json.dll",
-        "Newtonsoft.Json.xml",
-        "NuGet.exe",
-        "System.Net.Http.dll",
-        "System.Net.Http.Extensions.dll",
-        "System.Net.Http.Extensions.xml",
-        "System.Net.Http.Primitives.dll",
-        "System.Net.Http.Primitives.xml",
-        "System.Net.Http.xml"
-      ]
-    },
-    "Ix-Async/1.2.3-beta": {
-      "sha512": "0dd5YHSuoc0t4WIh8uVqSa5St3pA+KtZ0HiAVDUOOedoqg4IVoa1r2oTfcVZZSlU44ESCupbbqNe2WUUD4Z16g==",
-      "files": [
-        "Ix-Async.1.2.3-beta.nupkg",
-        "Ix-Async.1.2.3-beta.nupkg.sha512",
-        "Ix-Async.nuspec",
-        "lib/net40/System.Interactive.Async.dll",
-        "lib/net40/System.Interactive.Async.XML",
-        "lib/net45/System.Interactive.Async.dll",
-        "lib/net45/System.Interactive.Async.XML",
-        "lib/portable-windows8+net45+wp8+wpa81/System.Interactive.Async.dll",
-        "lib/portable-windows8+net45+wp8+wpa81/System.Interactive.Async.XML"
-      ]
-    },
-    "jQuery/2.1.1": {
-      "sha512": "/cy0NGAGBx0W6XLqrnehQAKeJhfnZLDdPnBvlNLq/k4mraD1a7rbHBYzV5PYBaz9t5wh+VrGhPUbPztvnFAOrQ==",
-      "files": [
-        "Content/Scripts/jquery-2.1.1.js",
-        "Content/Scripts/jquery-2.1.1.min.js",
-        "Content/Scripts/jquery-2.1.1.min.map",
-        "Content/Scripts/jquery-2.1.1-vsdoc.js",
-        "jQuery.2.1.1.nupkg",
-        "jQuery.2.1.1.nupkg.sha512",
-        "jQuery.nuspec",
-        "Tools/common.ps1",
-        "Tools/install.ps1",
-        "Tools/jquery-2.1.1.intellisense.js",
-        "Tools/uninstall.ps1"
+        "AzureCloudTableContext.2.2.0-beta.nupkg",
+        "AzureCloudTableContext.2.2.0-beta.nupkg.sha512",
+        "AzureCloudTableContext.nuspec",
+        "lib/net45/AzureCloudTableContext.Api.dll"
       ]
     },
     "Microsoft.AspNet.Antiforgery/1.0.0-beta6": {
@@ -2502,113 +2272,6 @@
         "repo.json"
       ]
     },
-    "Microsoft.Bcl/1.1.10": {
-      "sha512": "+tTqoh/M1pyL8El3qLy30EcwnAtyvFoDZJtdG9Cbg/WdFbh4N8kyrq198XHuEL7lnJbeD0DRO8jcX5IIOh05cQ==",
-      "files": [
-        "lib/monoandroid/_._",
-        "lib/monotouch/_._",
-        "lib/net40/ensureRedirect.xml",
-        "lib/net40/System.IO.dll",
-        "lib/net40/System.IO.xml",
-        "lib/net40/System.Runtime.dll",
-        "lib/net40/System.Runtime.xml",
-        "lib/net40/System.Threading.Tasks.dll",
-        "lib/net40/System.Threading.Tasks.xml",
-        "lib/net45/_._",
-        "lib/portable-net40+sl4+win8/ensureRedirect.xml",
-        "lib/portable-net40+sl4+win8/System.IO.dll",
-        "lib/portable-net40+sl4+win8/System.IO.xml",
-        "lib/portable-net40+sl4+win8/System.Runtime.dll",
-        "lib/portable-net40+sl4+win8/System.Runtime.xml",
-        "lib/portable-net40+sl4+win8/System.Threading.Tasks.dll",
-        "lib/portable-net40+sl4+win8/System.Threading.Tasks.xml",
-        "lib/portable-net40+sl4+win8+wp71+wpa81/ensureRedirect.xml",
-        "lib/portable-net40+sl4+win8+wp71+wpa81/System.IO.dll",
-        "lib/portable-net40+sl4+win8+wp71+wpa81/System.IO.xml",
-        "lib/portable-net40+sl4+win8+wp71+wpa81/System.Runtime.dll",
-        "lib/portable-net40+sl4+win8+wp71+wpa81/System.Runtime.xml",
-        "lib/portable-net40+sl4+win8+wp71+wpa81/System.Threading.Tasks.dll",
-        "lib/portable-net40+sl4+win8+wp71+wpa81/System.Threading.Tasks.xml",
-        "lib/portable-net40+sl4+win8+wp8+wpa81/ensureRedirect.xml",
-        "lib/portable-net40+sl4+win8+wp8+wpa81/System.IO.dll",
-        "lib/portable-net40+sl4+win8+wp8+wpa81/System.IO.xml",
-        "lib/portable-net40+sl4+win8+wp8+wpa81/System.Runtime.dll",
-        "lib/portable-net40+sl4+win8+wp8+wpa81/System.Runtime.xml",
-        "lib/portable-net40+sl4+win8+wp8+wpa81/System.Threading.Tasks.dll",
-        "lib/portable-net40+sl4+win8+wp8+wpa81/System.Threading.Tasks.xml",
-        "lib/portable-net40+sl5+win8+wp8+wpa81/ensureRedirect.xml",
-        "lib/portable-net40+sl5+win8+wp8+wpa81/System.IO.dll",
-        "lib/portable-net40+sl5+win8+wp8+wpa81/System.IO.xml",
-        "lib/portable-net40+sl5+win8+wp8+wpa81/System.Runtime.dll",
-        "lib/portable-net40+sl5+win8+wp8+wpa81/System.Runtime.xml",
-        "lib/portable-net40+sl5+win8+wp8+wpa81/System.Threading.Tasks.dll",
-        "lib/portable-net40+sl5+win8+wp8+wpa81/System.Threading.Tasks.xml",
-        "lib/portable-net40+win8/ensureRedirect.xml",
-        "lib/portable-net40+win8/System.IO.dll",
-        "lib/portable-net40+win8/System.IO.xml",
-        "lib/portable-net40+win8/System.Runtime.dll",
-        "lib/portable-net40+win8/System.Runtime.xml",
-        "lib/portable-net40+win8/System.Threading.Tasks.dll",
-        "lib/portable-net40+win8/System.Threading.Tasks.xml",
-        "lib/portable-net40+win8+wp8+wpa81/ensureRedirect.xml",
-        "lib/portable-net40+win8+wp8+wpa81/System.IO.dll",
-        "lib/portable-net40+win8+wp8+wpa81/System.IO.xml",
-        "lib/portable-net40+win8+wp8+wpa81/System.Runtime.dll",
-        "lib/portable-net40+win8+wp8+wpa81/System.Runtime.xml",
-        "lib/portable-net40+win8+wp8+wpa81/System.Threading.Tasks.dll",
-        "lib/portable-net40+win8+wp8+wpa81/System.Threading.Tasks.xml",
-        "lib/portable-net45+win8+wp8+wpa81/_._",
-        "lib/portable-net45+win8+wpa81/_._",
-        "lib/portable-net451+win81/_._",
-        "lib/portable-net451+win81+wpa81/_._",
-        "lib/portable-win81+wp81+wpa81/_._",
-        "lib/sl4/System.IO.dll",
-        "lib/sl4/System.IO.xml",
-        "lib/sl4/System.Runtime.dll",
-        "lib/sl4/System.Runtime.xml",
-        "lib/sl4/System.Threading.Tasks.dll",
-        "lib/sl4/System.Threading.Tasks.xml",
-        "lib/sl4-windowsphone71/ensureRedirect.xml",
-        "lib/sl4-windowsphone71/System.IO.dll",
-        "lib/sl4-windowsphone71/System.IO.xml",
-        "lib/sl4-windowsphone71/System.Runtime.dll",
-        "lib/sl4-windowsphone71/System.Runtime.xml",
-        "lib/sl4-windowsphone71/System.Threading.Tasks.dll",
-        "lib/sl4-windowsphone71/System.Threading.Tasks.xml",
-        "lib/sl5/System.IO.dll",
-        "lib/sl5/System.IO.xml",
-        "lib/sl5/System.Runtime.dll",
-        "lib/sl5/System.Runtime.xml",
-        "lib/sl5/System.Threading.Tasks.dll",
-        "lib/sl5/System.Threading.Tasks.xml",
-        "lib/win8/_._",
-        "lib/wp8/_._",
-        "lib/wpa81/_._",
-        "lib/Xamarin.iOS10/_._",
-        "License-Stable.rtf",
-        "Microsoft.Bcl.1.1.10.nupkg",
-        "Microsoft.Bcl.1.1.10.nupkg.sha512",
-        "Microsoft.Bcl.nuspec"
-      ]
-    },
-    "Microsoft.Bcl.Build/1.0.14": {
-      "sha512": "cDLKSvNvRa519hplsbSoYqO69TjdDIhfjtKUM0g20/nVROoWsGav9KCI9HtnGjLmdV1+TcUUDhbotcllibjPEA==",
-      "files": [
-        "content/net40/_._",
-        "content/netcore45/_._",
-        "content/portable-net40+win8+sl4+wp71+wpa81/_._",
-        "content/sl4/_._",
-        "content/sl4-windowsphone71/_._",
-        "License-Stable.rtf",
-        "Microsoft.Bcl.Build.1.0.14.nupkg",
-        "Microsoft.Bcl.Build.1.0.14.nupkg.sha512",
-        "Microsoft.Bcl.Build.nuspec",
-        "tools/Install.ps1",
-        "tools/Microsoft.Bcl.Build.targets",
-        "tools/Microsoft.Bcl.Build.Tasks.dll",
-        "tools/Uninstall.ps1"
-      ]
-    },
     "Microsoft.CodeAnalysis.Analyzers/1.0.0": {
       "sha512": "E7VdmGw6xO3VHWapC+pNLZmo6yncS53UY3bmb5WZm9wliJBB1A6brgzKA4fcqiLrmJFx71r0M2zEbRDphRLUNg==",
       "files": [
@@ -2650,8 +2313,8 @@
         "ThirdPartyNotices.rtf"
       ]
     },
-    "Microsoft.Data.Edm/5.6.0": {
-      "sha512": "85HVRPZznEBFLnkbNqBeZUAD7q5h+KdWDO0Beqs9fH/0DWtFX8p02jKIftY3vii7uUoWOdu4K6Kd/p7Xtz3TsA==",
+    "Microsoft.Data.Edm/5.2.0": {
+      "sha512": "48Mgg3kSFwfZ3axemz1glGkHvHsDdPqHNV48Z4mUvfA9K00xiEqAaE6mlbMszkRIQyt3EWLfeXrK5MY9WqQp4A==",
       "files": [
         "lib/net40/de/Microsoft.Data.Edm.resources.dll",
         "lib/net40/es/Microsoft.Data.Edm.resources.dll",
@@ -2664,17 +2327,6 @@
         "lib/net40/ru/Microsoft.Data.Edm.resources.dll",
         "lib/net40/zh-Hans/Microsoft.Data.Edm.resources.dll",
         "lib/net40/zh-Hant/Microsoft.Data.Edm.resources.dll",
-        "lib/portable-net40+sl5+wp8+win8/de/Microsoft.Data.Edm.Portable.resources.dll",
-        "lib/portable-net40+sl5+wp8+win8/es/Microsoft.Data.Edm.Portable.resources.dll",
-        "lib/portable-net40+sl5+wp8+win8/fr/Microsoft.Data.Edm.Portable.resources.dll",
-        "lib/portable-net40+sl5+wp8+win8/it/Microsoft.Data.Edm.Portable.resources.dll",
-        "lib/portable-net40+sl5+wp8+win8/ja/Microsoft.Data.Edm.Portable.resources.dll",
-        "lib/portable-net40+sl5+wp8+win8/ko/Microsoft.Data.Edm.Portable.resources.dll",
-        "lib/portable-net40+sl5+wp8+win8/Microsoft.Data.Edm.Portable.dll",
-        "lib/portable-net40+sl5+wp8+win8/Microsoft.Data.Edm.Portable.xml",
-        "lib/portable-net40+sl5+wp8+win8/ru/Microsoft.Data.Edm.Portable.resources.dll",
-        "lib/portable-net40+sl5+wp8+win8/zh-Hans/Microsoft.Data.Edm.Portable.resources.dll",
-        "lib/portable-net40+sl5+wp8+win8/zh-Hant/Microsoft.Data.Edm.Portable.resources.dll",
         "lib/sl4/de/Microsoft.Data.Edm.SL.resources.dll",
         "lib/sl4/es/Microsoft.Data.Edm.SL.resources.dll",
         "lib/sl4/fr/Microsoft.Data.Edm.SL.resources.dll",
@@ -2686,13 +2338,13 @@
         "lib/sl4/ru/Microsoft.Data.Edm.SL.resources.dll",
         "lib/sl4/zh-Hans/Microsoft.Data.Edm.SL.resources.dll",
         "lib/sl4/zh-Hant/Microsoft.Data.Edm.SL.resources.dll",
-        "Microsoft.Data.Edm.5.6.0.nupkg",
-        "Microsoft.Data.Edm.5.6.0.nupkg.sha512",
+        "Microsoft.Data.Edm.5.2.0.nupkg",
+        "Microsoft.Data.Edm.5.2.0.nupkg.sha512",
         "Microsoft.Data.Edm.nuspec"
       ]
     },
-    "Microsoft.Data.OData/5.6.0": {
-      "sha512": "Lt+w1eHXe3+HOl0S4XrfO8AW2ALvKFBZtRfb9ZcmTahmE02HIlbaa3cy/jBTwNoFihfQ5vaBjNl4xspSmVcPRw==",
+    "Microsoft.Data.OData/5.2.0": {
+      "sha512": "gxiUPnPdrl6LV251KtnqrkwQDeBI0g7a+YWfd6J2ANXxLJq0N+Z88gWOQ1yowURzbNWBu2EsffC4qJoEQaaLfA==",
       "files": [
         "lib/net40/de/Microsoft.Data.OData.resources.dll",
         "lib/net40/es/Microsoft.Data.OData.resources.dll",
@@ -2705,17 +2357,6 @@
         "lib/net40/ru/Microsoft.Data.OData.resources.dll",
         "lib/net40/zh-Hans/Microsoft.Data.OData.resources.dll",
         "lib/net40/zh-Hant/Microsoft.Data.OData.resources.dll",
-        "lib/portable-net40+sl5+wp8+win8/de/Microsoft.Data.OData.Portable.resources.dll",
-        "lib/portable-net40+sl5+wp8+win8/es/Microsoft.Data.OData.Portable.resources.dll",
-        "lib/portable-net40+sl5+wp8+win8/fr/Microsoft.Data.OData.Portable.resources.dll",
-        "lib/portable-net40+sl5+wp8+win8/it/Microsoft.Data.OData.Portable.resources.dll",
-        "lib/portable-net40+sl5+wp8+win8/ja/Microsoft.Data.OData.Portable.resources.dll",
-        "lib/portable-net40+sl5+wp8+win8/ko/Microsoft.Data.OData.Portable.resources.dll",
-        "lib/portable-net40+sl5+wp8+win8/Microsoft.Data.OData.Portable.dll",
-        "lib/portable-net40+sl5+wp8+win8/Microsoft.Data.OData.Portable.xml",
-        "lib/portable-net40+sl5+wp8+win8/ru/Microsoft.Data.OData.Portable.resources.dll",
-        "lib/portable-net40+sl5+wp8+win8/zh-Hans/Microsoft.Data.OData.Portable.resources.dll",
-        "lib/portable-net40+sl5+wp8+win8/zh-Hant/Microsoft.Data.OData.Portable.resources.dll",
         "lib/sl4/de/Microsoft.Data.OData.SL.resources.dll",
         "lib/sl4/es/Microsoft.Data.OData.SL.resources.dll",
         "lib/sl4/fr/Microsoft.Data.OData.SL.resources.dll",
@@ -2727,50 +2368,9 @@
         "lib/sl4/ru/Microsoft.Data.OData.SL.resources.dll",
         "lib/sl4/zh-Hans/Microsoft.Data.OData.SL.resources.dll",
         "lib/sl4/zh-Hant/Microsoft.Data.OData.SL.resources.dll",
-        "Microsoft.Data.OData.5.6.0.nupkg",
-        "Microsoft.Data.OData.5.6.0.nupkg.sha512",
+        "Microsoft.Data.OData.5.2.0.nupkg",
+        "Microsoft.Data.OData.5.2.0.nupkg.sha512",
         "Microsoft.Data.OData.nuspec"
-      ]
-    },
-    "Microsoft.Data.Services.Client/5.6.0": {
-      "sha512": "OPXiTugmoZNO4X5RrLEKyIKhXMBBGNNM7szgtAyQ42snJFTcC2pStIYtQXaSAd1gHx/MNvTYcNN8vn7o64cFgA==",
-      "files": [
-        "lib/net40/de/Microsoft.Data.Services.Client.resources.dll",
-        "lib/net40/es/Microsoft.Data.Services.Client.resources.dll",
-        "lib/net40/fr/Microsoft.Data.Services.Client.resources.dll",
-        "lib/net40/it/Microsoft.Data.Services.Client.resources.dll",
-        "lib/net40/ja/Microsoft.Data.Services.Client.resources.dll",
-        "lib/net40/ko/Microsoft.Data.Services.Client.resources.dll",
-        "lib/net40/Microsoft.Data.Services.Client.dll",
-        "lib/net40/Microsoft.Data.Services.Client.xml",
-        "lib/net40/ru/Microsoft.Data.Services.Client.resources.dll",
-        "lib/net40/zh-Hans/Microsoft.Data.Services.Client.resources.dll",
-        "lib/net40/zh-Hant/Microsoft.Data.Services.Client.resources.dll",
-        "lib/portable-net45+sl5+wp8+win8/de/Microsoft.Data.Services.Client.Portable.resources.dll",
-        "lib/portable-net45+sl5+wp8+win8/es/Microsoft.Data.Services.Client.Portable.resources.dll",
-        "lib/portable-net45+sl5+wp8+win8/fr/Microsoft.Data.Services.Client.Portable.resources.dll",
-        "lib/portable-net45+sl5+wp8+win8/it/Microsoft.Data.Services.Client.Portable.resources.dll",
-        "lib/portable-net45+sl5+wp8+win8/ja/Microsoft.Data.Services.Client.Portable.resources.dll",
-        "lib/portable-net45+sl5+wp8+win8/ko/Microsoft.Data.Services.Client.Portable.resources.dll",
-        "lib/portable-net45+sl5+wp8+win8/Microsoft.Data.Services.Client.Portable.dll",
-        "lib/portable-net45+sl5+wp8+win8/Microsoft.Data.Services.Client.Portable.xml",
-        "lib/portable-net45+sl5+wp8+win8/ru/Microsoft.Data.Services.Client.Portable.resources.dll",
-        "lib/portable-net45+sl5+wp8+win8/zh-Hans/Microsoft.Data.Services.Client.Portable.resources.dll",
-        "lib/portable-net45+sl5+wp8+win8/zh-Hant/Microsoft.Data.Services.Client.Portable.resources.dll",
-        "lib/sl4/de/Microsoft.Data.Services.Client.SL.resources.dll",
-        "lib/sl4/es/Microsoft.Data.Services.Client.SL.resources.dll",
-        "lib/sl4/fr/Microsoft.Data.Services.Client.SL.resources.dll",
-        "lib/sl4/it/Microsoft.Data.Services.Client.SL.resources.dll",
-        "lib/sl4/ja/Microsoft.Data.Services.Client.SL.resources.dll",
-        "lib/sl4/ko/Microsoft.Data.Services.Client.SL.resources.dll",
-        "lib/sl4/Microsoft.Data.Services.Client.SL.dll",
-        "lib/sl4/Microsoft.Data.Services.Client.SL.xml",
-        "lib/sl4/ru/Microsoft.Data.Services.Client.SL.resources.dll",
-        "lib/sl4/zh-Hans/Microsoft.Data.Services.Client.SL.resources.dll",
-        "lib/sl4/zh-Hant/Microsoft.Data.Services.Client.SL.resources.dll",
-        "Microsoft.Data.Services.Client.5.6.0.nupkg",
-        "Microsoft.Data.Services.Client.5.6.0.nupkg.sha512",
-        "Microsoft.Data.Services.Client.nuspec"
       ]
     },
     "Microsoft.Framework.Caching.Abstractions/1.0.0-beta6": {
@@ -3150,73 +2750,6 @@
         "repo.json"
       ]
     },
-    "Microsoft.Net.Http/2.2.29": {
-      "serviceable": true,
-      "sha512": "fc4CPEewJ30Xgal+fSq1lYIBt582A7eKlAL7O4HXiYAiTp2VTnA4osSvk7T2n8aS4xTCPVJusQk3yKLT0XSpkg==",
-      "files": [
-        "lib/monoandroid/System.Net.Http.Extensions.dll",
-        "lib/monoandroid/System.Net.Http.Extensions.XML",
-        "lib/monoandroid/System.Net.Http.Primitives.dll",
-        "lib/monoandroid/System.Net.Http.Primitives.xml",
-        "lib/monotouch/System.Net.Http.Extensions.dll",
-        "lib/monotouch/System.Net.Http.Extensions.XML",
-        "lib/monotouch/System.Net.Http.Primitives.dll",
-        "lib/monotouch/System.Net.Http.Primitives.xml",
-        "lib/net40/ensureRedirect.xml",
-        "lib/net40/System.Net.Http.dll",
-        "lib/net40/System.Net.Http.Extensions.dll",
-        "lib/net40/System.Net.Http.Extensions.XML",
-        "lib/net40/System.Net.Http.Primitives.dll",
-        "lib/net40/System.Net.Http.Primitives.xml",
-        "lib/net40/System.Net.Http.WebRequest.dll",
-        "lib/net40/System.Net.Http.WebRequest.xml",
-        "lib/net40/System.Net.Http.xml",
-        "lib/net45/ensureRedirect.xml",
-        "lib/net45/System.Net.Http.Extensions.dll",
-        "lib/net45/System.Net.Http.Extensions.XML",
-        "lib/net45/System.Net.Http.Primitives.dll",
-        "lib/net45/System.Net.Http.Primitives.xml",
-        "lib/portable-net40+sl4+win8+wp71+wpa81/ensureRedirect.xml",
-        "lib/portable-net40+sl4+win8+wp71+wpa81/System.Net.Http.dll",
-        "lib/portable-net40+sl4+win8+wp71+wpa81/System.Net.Http.Extensions.dll",
-        "lib/portable-net40+sl4+win8+wp71+wpa81/System.Net.Http.Extensions.XML",
-        "lib/portable-net40+sl4+win8+wp71+wpa81/System.Net.Http.Primitives.dll",
-        "lib/portable-net40+sl4+win8+wp71+wpa81/System.Net.Http.Primitives.XML",
-        "lib/portable-net40+sl4+win8+wp71+wpa81/System.Net.Http.xml",
-        "lib/portable-net45+win8/ensureRedirect.xml",
-        "lib/portable-net45+win8/System.Net.Http.Extensions.dll",
-        "lib/portable-net45+win8/System.Net.Http.Extensions.XML",
-        "lib/portable-net45+win8/System.Net.Http.Primitives.dll",
-        "lib/portable-net45+win8/System.Net.Http.Primitives.xml",
-        "lib/portable-net45+win8+wpa81/ensureRedirect.xml",
-        "lib/portable-net45+win8+wpa81/System.Net.Http.Extensions.dll",
-        "lib/portable-net45+win8+wpa81/System.Net.Http.Extensions.XML",
-        "lib/portable-net45+win8+wpa81/System.Net.Http.Primitives.dll",
-        "lib/portable-net45+win8+wpa81/System.Net.Http.Primitives.xml",
-        "lib/sl4-windowsphone71/System.Net.Http.dll",
-        "lib/sl4-windowsphone71/System.Net.Http.Extensions.dll",
-        "lib/sl4-windowsphone71/System.Net.Http.Extensions.XML",
-        "lib/sl4-windowsphone71/System.Net.Http.Primitives.dll",
-        "lib/sl4-windowsphone71/System.Net.Http.Primitives.XML",
-        "lib/sl4-windowsphone71/System.Net.Http.xml",
-        "lib/win8/System.Net.Http.Extensions.dll",
-        "lib/win8/System.Net.Http.Extensions.XML",
-        "lib/win8/System.Net.Http.Primitives.dll",
-        "lib/win8/System.Net.Http.Primitives.xml",
-        "lib/wpa81/System.Net.Http.Extensions.dll",
-        "lib/wpa81/System.Net.Http.Extensions.XML",
-        "lib/wpa81/System.Net.Http.Primitives.dll",
-        "lib/wpa81/System.Net.Http.Primitives.xml",
-        "lib/Xamarin.iOS10/System.Net.Http.Extensions.dll",
-        "lib/Xamarin.iOS10/System.Net.Http.Extensions.XML",
-        "lib/Xamarin.iOS10/System.Net.Http.Primitives.dll",
-        "lib/Xamarin.iOS10/System.Net.Http.Primitives.xml",
-        "License-Stable.rtf",
-        "Microsoft.Net.Http.2.2.29.nupkg",
-        "Microsoft.Net.Http.2.2.29.nupkg.sha512",
-        "Microsoft.Net.Http.nuspec"
-      ]
-    },
     "Microsoft.Net.Http.Headers/1.0.0-beta6": {
       "serviceable": true,
       "sha512": "PeBHRiu9gSlP31Z1V3WEmIEb+1YJDdNdQY7xsSA98d3GnZqi+7ZERXVNcDDYMI16QViA/+Gq10HtYti8GwDHtQ==",
@@ -3282,17 +2815,17 @@
         "Microsoft.Web.Infrastructure.nuspec"
       ]
     },
-    "Microsoft.WindowsAzure.ConfigurationManager/1.8.0.0": {
-      "sha512": "a6b+9C3kZ3YtyqlxDfMSEYnqARFpr/BQcCqZFCgqBAEHDUZNr2/GOL9gC2gialM0SMOSJ5PXic4NirF19HtMwQ==",
+    "Microsoft.WindowsAzure.ConfigurationManager/2.0.2.0": {
+      "sha512": "0HNb4MGaH5Xx/yQfsN0EarxC9ezbw1N9wuZwN9EEwcvNiFptsQOUTSxuOaUyj7snTvEXLJv++ytLA6GsW54TSQ==",
       "files": [
-        "lib/net35-full/Microsoft.WindowsAzure.Configuration.dll",
-        "Microsoft.WindowsAzure.ConfigurationManager.1.8.0.nupkg",
-        "Microsoft.WindowsAzure.ConfigurationManager.1.8.0.nupkg.sha512",
+        "lib/net40/Microsoft.WindowsAzure.Configuration.dll",
+        "Microsoft.WindowsAzure.ConfigurationManager.2.0.2.nupkg",
+        "Microsoft.WindowsAzure.ConfigurationManager.2.0.2.nupkg.sha512",
         "Microsoft.WindowsAzure.ConfigurationManager.nuspec"
       ]
     },
-    "Newtonsoft.Json/7.0.1": {
-      "sha512": "q3V4KLetMLnt1gpAVWgtXnHjKs0UG/RalBc29u2ZKxd5t5Ze4JBL5WiiYIklJyK/5CRiIiNwigVQUo0FgbsuWA==",
+    "Newtonsoft.Json/6.0.6": {
+      "sha512": "w26uZNyCG5VeoKiEOJ4+9/o8koSofLKwHl7WLreIcp0U6r57L7WiRXmjp8MTKFw6dYNZ9AE0lw69WYbIhUsU9Q==",
       "files": [
         "lib/net20/Newtonsoft.Json.dll",
         "lib/net20/Newtonsoft.Json.xml",
@@ -3302,33 +2835,16 @@
         "lib/net40/Newtonsoft.Json.xml",
         "lib/net45/Newtonsoft.Json.dll",
         "lib/net45/Newtonsoft.Json.xml",
+        "lib/netcore45/Newtonsoft.Json.dll",
+        "lib/netcore45/Newtonsoft.Json.xml",
         "lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.dll",
         "lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.xml",
-        "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.dll",
-        "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.xml",
-        "Newtonsoft.Json.7.0.1.nupkg",
-        "Newtonsoft.Json.7.0.1.nupkg.sha512",
+        "lib/portable-net45+wp80+win8+wpa81+aspnetcore50/Newtonsoft.Json.dll",
+        "lib/portable-net45+wp80+win8+wpa81+aspnetcore50/Newtonsoft.Json.xml",
+        "Newtonsoft.Json.6.0.6.nupkg",
+        "Newtonsoft.Json.6.0.6.nupkg.sha512",
         "Newtonsoft.Json.nuspec",
         "tools/install.ps1"
-      ]
-    },
-    "Remotion.Linq/1.15.15.0": {
-      "sha512": "AKSioFZ9bbFa29F97XYYwXlReOcfk42C+/vV8D9D+8q887MXBzXQBsJC41vsE4bbZCLZ6+HTBzjXZyotscNdxw==",
-      "files": [
-        "lib/portable-net45+wp80+wpa81+win/Remotion.Linq.dll",
-        "lib/portable-net45+wp80+wpa81+win/Remotion.Linq.xml",
-        "Remotion.Linq.1.15.15.nupkg",
-        "Remotion.Linq.1.15.15.nupkg.sha512",
-        "Remotion.Linq.nuspec"
-      ]
-    },
-    "SampleDependency/1.0.0": {
-      "sha512": "rkrKnTI2KT/L+BaaB6/xZbDiqyQ702TxYp5adqgC/GYU7KBufnNArz/5KNetThpOeXmVEMg0VlFU+9/cKz0L4w==",
-      "files": [
-        "content/Scripts/nugetexample.js",
-        "SampleDependency.1.0.0.nupkg",
-        "SampleDependency.1.0.0.nupkg.sha512",
-        "SampleDependency.nuspec"
       ]
     },
     "Sendgrid/6.1.0": {
@@ -3348,6 +2864,22 @@
         "SendGrid.SmtpApi.1.3.1.nupkg",
         "SendGrid.SmtpApi.1.3.1.nupkg.sha512",
         "SendGrid.SmtpApi.nuspec"
+      ]
+    },
+    "ServiceStack.Text/3.9.70": {
+      "sha512": "otRymdxTqFaClEfYRZtw3zEQj0pbqpbsREQ0c/v198fcCZgvTEHmy3tI9hoZW2F87SJRBm5HqsV0bewCCcWYlw==",
+      "files": [
+        "lib/net35/ServiceStack.Text.dll",
+        "lib/net35/ServiceStack.Text.XML",
+        "lib/sl4/ServiceStack.Text.dll",
+        "lib/sl4/ServiceStack.Text.xml",
+        "lib/sl4-windowsphone71/ServiceStack.Text.WP.dll",
+        "lib/sl4-windowsphone71/ServiceStack.Text.WP.XML",
+        "lib/sl5/ServiceStack.Text.dll",
+        "lib/sl5/ServiceStack.Text.XML",
+        "ServiceStack.Text.3.9.70.nupkg",
+        "ServiceStack.Text.3.9.70.nupkg.sha512",
+        "ServiceStack.Text.nuspec"
       ]
     },
     "System.Collections.Immutable/1.1.36": {
@@ -3514,8 +3046,8 @@
         "System.Runtime.Serialization.Primitives.nuspec"
       ]
     },
-    "System.Spatial/5.6.0": {
-      "sha512": "O5hFsuKD1vUwXw9TrsbQ7XMlkL5qWHNJYSEchsaCmxFI60ffa3FSHnqvOBHKzLplaiA3enVPufDPgv9xSrp11A==",
+    "System.Spatial/5.2.0": {
+      "sha512": "HWSjn7sI5sCyCpyiwUk/f8xKAihV0sh+dGPVyJEQsbvvPbkJnm3abgRg4rbQJ32efDH3C/0xoODsgezqdlXPJA==",
       "files": [
         "lib/net40/de/System.Spatial.resources.dll",
         "lib/net40/es/System.Spatial.resources.dll",
@@ -3528,17 +3060,6 @@
         "lib/net40/System.Spatial.xml",
         "lib/net40/zh-Hans/System.Spatial.resources.dll",
         "lib/net40/zh-Hant/System.Spatial.resources.dll",
-        "lib/portable-net40+sl5+wp8+win8/de/System.Spatial.Portable.resources.dll",
-        "lib/portable-net40+sl5+wp8+win8/es/System.Spatial.Portable.resources.dll",
-        "lib/portable-net40+sl5+wp8+win8/fr/System.Spatial.Portable.resources.dll",
-        "lib/portable-net40+sl5+wp8+win8/it/System.Spatial.Portable.resources.dll",
-        "lib/portable-net40+sl5+wp8+win8/ja/System.Spatial.Portable.resources.dll",
-        "lib/portable-net40+sl5+wp8+win8/ko/System.Spatial.Portable.resources.dll",
-        "lib/portable-net40+sl5+wp8+win8/ru/System.Spatial.Portable.resources.dll",
-        "lib/portable-net40+sl5+wp8+win8/System.Spatial.Portable.dll",
-        "lib/portable-net40+sl5+wp8+win8/System.Spatial.Portable.xml",
-        "lib/portable-net40+sl5+wp8+win8/zh-Hans/System.Spatial.Portable.resources.dll",
-        "lib/portable-net40+sl5+wp8+win8/zh-Hant/System.Spatial.Portable.resources.dll",
         "lib/sl4/de/System.Spatial.SL.resources.dll",
         "lib/sl4/es/System.Spatial.SL.resources.dll",
         "lib/sl4/fr/System.Spatial.SL.resources.dll",
@@ -3550,29 +3071,19 @@
         "lib/sl4/System.Spatial.SL.xml",
         "lib/sl4/zh-Hans/System.Spatial.SL.resources.dll",
         "lib/sl4/zh-Hant/System.Spatial.SL.resources.dll",
-        "System.Spatial.5.6.0.nupkg",
-        "System.Spatial.5.6.0.nupkg.sha512",
+        "System.Spatial.5.2.0.nupkg",
+        "System.Spatial.5.2.0.nupkg.sha512",
         "System.Spatial.nuspec"
       ]
     },
-    "System.Web.Helpers.dll/1.0.0": {
-      "sha512": "3Dw9XBmYTCIgEv0Z49WHOtGRYbw/UDI5qMFxfoxrwJ0UyfhS8mTcpfBkMOAMvPCQiywnUbHG2fvwoenhANg/AA==",
-      "files": [
-        "lib/Net40/System.Web.Helpers.dll",
-        "System.Web.Helpers.dll.1.0.0.nupkg",
-        "System.Web.Helpers.dll.1.0.0.nupkg.sha512",
-        "System.Web.Helpers.dll.nuspec"
-      ]
-    },
-    "WindowsAzure.Storage/4.1.0": {
-      "sha512": "Bq2CpX2dvQ10XZCDQAz+g/DSeYL1VjC9Nh1qw57UqgFGhd98zxnTiEG43ou6f4Zy0k935vV+Q5rQTnULm+VfXg==",
+    "WindowsAzure.Storage/2.1.0.3": {
+      "sha512": "b4+BsFXshwILFg2ia/Yfl2j5Cksmw5aUYSg4viW6xWiRRB/ZlcMPpDiU3KaMDpt0B/RSgVBt/C7Bz6RlW1N01w==",
       "files": [
         "lib/net40/Microsoft.WindowsAzure.Storage.dll",
+        "lib/net40/Microsoft.WindowsAzure.Storage.pdb",
         "lib/net40/Microsoft.WindowsAzure.Storage.xml",
-        "lib/win8/Microsoft.WindowsAzure.Storage.dll",
-        "lib/wp8/Microsoft.WindowsAzure.Storage.dll",
-        "WindowsAzure.Storage.4.1.0.nupkg",
-        "WindowsAzure.Storage.4.1.0.nupkg.sha512",
+        "WindowsAzure.Storage.2.1.0.3.nupkg",
+        "WindowsAzure.Storage.2.1.0.3.nupkg.sha512",
         "WindowsAzure.Storage.nuspec"
       ]
     }
@@ -3591,12 +3102,10 @@
       "Microsoft.Framework.Logging.Console >= 1.0.0-beta6",
       "System.Runtime.Serialization.Primitives >= 4.0.10-*",
       "Microsoft.VisualStudio.Web.BrowserLink.Loader >= 14.0.0-beta6",
-      "EntityFramework.AzureTableStorage >= 7.0.0-beta1",
+      "AzureCloudTableContext >= 2.2.0-beta",
+      "System.Configuration.Abstractions >= 2.0.2.24",
       "System.Net.Http >= 4.0.1-beta-23225",
       "Sendgrid >= 6.1.0",
-      "System.Web.Helpers.dll >= 1.0.0",
-      "System.Configuration.Abstractions >= 2.0.2.24",
-      "HttpClientExtensions >= 1.0.3",
       "System.Net.Http.Formatting.Extension >= 5.2.3.0",
       "Microsoft.AspNet.WebPages >= 3.2.3"
     ],

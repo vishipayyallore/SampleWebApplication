@@ -29,16 +29,28 @@
         "System.Net.Http.Formatting.Extension": "5.2.3.0",
         "System.Configuration.Abstractions": "2.0.2.24",
         "System.Net.Http": "4.0.1-beta-23225",
-        "System.Runtime.Serialization.Primitives": "4.0.10-*"
+        "System.Runtime.Serialization.Primitives": "4.0.10-*",
+        "System.Runtime": "4.0.20-beta-22816",
+        "System.Collections": "4.0.0.0",
+        "System.IO": "4.0.0.0",
+        "System.Text.Encoding": "4.0.0.0",
+        "System.Threading.Tasks": "4.0.0.0",
+        "System.Collections.Concurrent": "4.0.0.0",
+        "System.Linq": "4.0.0.0"
       },
       "frameworkAssemblies": {
+        "System.Core": "",
         "System": "",
         "mscorlib": "",
+        "System.ComponentModel.DataAnnotations": "4.0.0.0",
         "System.Data": "4.0.0.0",
+        "System.Data.Services.Client": "4.0.0.0",
         "System.Data.Linq": "4.0.0.0",
-        "System.Collections": "4.0.0.0",
+        "System.Configuration": "4.0.0.0",
+        "System.Security": "4.0.0.0",
         "System.Xml": "4.0.0.0",
-        "System.Xml.Linq": "4.0.0.0"
+        "System.Xml.Linq": "4.0.0.0",
+        "System.Net": "4.0.0.0"
       }
     }
   },
